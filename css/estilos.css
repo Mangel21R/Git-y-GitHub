@@ -1,27 +1,61 @@
-/* estilos.css - Estilos base para Dulce Sabor */
-
 body {
     background-color: #fff8f0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     color: #4b2e2e;
-}
-
-.container {
-    width: 900px;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 960px;
     margin: 0 auto;
-}
-
-header, footer {
+  }
+  
+  header {
     background-color: #f4d3c2;
-    padding: 1em;
+    padding: 1.5em 2em;
     margin-bottom: 1em;
-}
-.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #4b2e2e;
+  }
+  
+  nav {
+    margin-top: 0.5em;
+  }
+  
+  nav a {
+    text-decoration: none;
+    margin: 0 1em;
+    color: #732e2e;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #c92a59;
+  }
+  
+  main section {
+    margin-bottom: 2em;
+  }
+  
+  .about {
     background-color: #fff4f7;
     padding: 2em;
     margin-top: 2em;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
   }
   
   .precio {
@@ -33,34 +67,102 @@ header, footer {
   form select,
   form textarea {
     width: 100%;
+    padding: 0.7em;
+    border: 1px solid #d8bfb4;
+    border-radius: 6px;
     margin-bottom: 1em;
+    font-family: inherit;
   }
   
   form button {
     background: #ff85a2;
     border: none;
-    padding: 1em;
+    padding: 1em 2em;
     color: white;
+    font-weight: bold;
     cursor: pointer;
+    border-radius: 6px;
+    transition: background 0.3s ease;
   }
   
   form button:hover {
     background: #e67390;
   }
   
+  footer {
+    background-color: #f4d3c2;
+    padding: 1em;
+    text-align: center;
+    border-radius: 12px;
+    font-size: 0.95em;
+    color: #4b2e2e;
+    margin-top: 2em;
+  }
+  
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 2em;
+  }
+  
+  .producto {
+    width: calc(33.333% - 20px);
+    background-color: #fff;
+    border: 1px solid #e0cfc2;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 1em;
+    transition: transform 0.3s ease;
+  }
+  
+  .producto:hover {
+    transform: translateY(-5px);
+  }
+  
+  .producto img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #e0cfc2;
+    margin-bottom: 1em;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .producto h3 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    color: #4b2e2e;
+  }
+  
+  .producto p {
+    font-size: 1em;
+    color: #7a4a4a;
+  }
+  
   @media (max-width: 768px) {
-    .productos {
-      display: block;
+    .producto {
+      width: calc(50% - 20px);
     }
   
     nav a {
       display: block;
-      margin-bottom: 0.5em;
+      margin: 0.5em 0;
     }
   
-    header,
-    footer {
+    header, footer {
       text-align: center;
     }
   }
   
+  @media (max-width: 480px) {
+    .producto {
+      width: 100%;
+    }
+  
+    header h1 {
+      font-size: 2em;
+    }
+  }

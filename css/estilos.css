@@ -18,3 +18,49 @@ header, footer {
     padding: 1em;
     margin-bottom: 1em;
 }
+.about {
+    background-color: #fff4f7;
+    padding: 2em;
+    margin-top: 2em;
+  }
+  
+  .precio {
+    font-weight: bold;
+    color: #c92a59;
+  }
+  
+  form input,
+  form select,
+  form textarea {
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  form button {
+    background: #ff85a2;
+    border: none;
+    padding: 1em;
+    color: white;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background: #e67390;
+  }
+  
+  @media (max-width: 768px) {
+    .productos {
+      display: block;
+    }
+  
+    nav a {
+      display: block;
+      margin-bottom: 0.5em;
+    }
+  
+    header,
+    footer {
+      text-align: center;
+    }
+  }
+  
